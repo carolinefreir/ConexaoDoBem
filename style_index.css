@@ -1,0 +1,33 @@
+body{
+    background-color: #ffebc9;
+    padding: 0;
+    margin: 0;
+}
+
+.menu{
+    height: 100px;
+    width: 100%;
+    display: flex;  
+    gap: 15px;
+    margin-top: 5px;   
+    margin-bottom: 5px;
+
+}
+
+.botao_menu{
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #fa681e;
+    padding: 10px;
+    border-radius: 20px;
+    color: #ffebc9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo{
+    width: auto;
+    height: 85px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-right: 40px;
+}
