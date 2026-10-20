@@ -8,16 +8,14 @@ body{
     height: 100px;
     width: 100%;
     display: flex;  
-    gap: 15px;
-    margin-top: 5px;   
+    gap: 15px;   
     margin-bottom: 5px;
-
 }
 
 .botao_menu{
     margin-top: auto;
     margin-bottom: auto;
-    background-color: #fa681e;
+    background-color: #f98417;
     padding: 10px;
     border-radius: 20px;
     color: #ffebc9;
