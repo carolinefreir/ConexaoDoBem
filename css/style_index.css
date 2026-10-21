@@ -132,3 +132,36 @@ body{
     color: #f98417;
     font-size: 20px;
 }
+
+.pq_existe{
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+
+.pq_existe p{
+    margin: 0;
+}
+
+.dados{
+    background-color: #ffe6d1;
+    border-left: 5px solid #f98417;
+    height: 150px;
+    width: 300px;
+    padding-left: 20px;
+}
+
+.dados p{
+    margin: 0;
+}
+
+.num_dado{
+    color: #f98417;
+    font-size: 40px;
+    padding-top: 7px;
+}
+
+.frase_dado{
+    color: rgb(52, 52, 52);
+    font-size: 14px;
+}
