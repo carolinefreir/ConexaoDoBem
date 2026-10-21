@@ -1,31 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConexãoDoBem | Home</title>
-    <link rel="stylesheet" href="style_index.css">
-
+    <link rel="stylesheet" href="css/style_index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="menu"><img src="logo.png" alt="Logo ConexãoDoBem" class="logo">
-            <div class="botao_menu">Se voluntariar</div>
-            <div class="botao_menu">Encontrar voluntários</div>
-            <div class="botao_menu">Como funciona?</div>
-            <div class="botao_menu">Quem somos?</div>
-            <div class="botao_menu">Seja colaborador</div>
-            <div class="botao_menu">Teste de Aptidão</div>
-            <div class="botao_menu">Perguntas Frequentes</div>
-            <div class="botao_menu">Contato</div>
+        <div class="menu"><img src="img/logo.png" alt="Logo ConexãoDoBem" class="logo">
+            <div class="botao_menu"><a href="index.html" aria-current="page">Home</a></div>
+            <div class="botao_menu"><a href="como_funciona.html">Como funciona?</a></div>
+            <div class="botao_menu"><a href="quem_somos.html">Quem somos?</a></div>
+            <div class="botao_menu"><a href="colaborador.html">Seja colaborador</a></div>
+            <div class="botao_menu"><a href="teste.html">Teste de Aptidão</a></div>
+            <div class="botao_menu"><a href="perguntas.html">Perguntas Frequentes</a></div>
+            <div class="botao_menu"><a href="contato.html">Contato</a></div>
         </div>
-        
-        <!--
-        <br>
-        <div class="menu"><img src="logo_sem_frase.png" alt="Logo ConexãoDoBem" class="logo"></div>
-        <br>
-        <div class="menu"><img src="logo_horizontal.png" alt="Logo ConexãoDoBem" class="logo"></div>
-        -->
     </header>
+    <main>
+        <div class="apresentacao">
+            <div class="frases">
+                <h1>Conectando pessoas,<br>ONGs e empresas para<br>um impacto maior.</h1>
+                <p>Encontre causas sociais e ambientais perto de você ou de forma remota,<br>
+                    participe de ações voluntárias e receba um certificado que pode ser<br>
+                    aproveitado como horas de atividades complementares.</p>
+                    <div style="
+                    display: flex; 
+                    gap: 20px;
+                    margin-top: 30px;">
+                        <div class="botao_voluntario"><a href="voluntariar.html"><b>Quero me voluntariar</b></a></div>
+                        <div class="botao_voluntario"><a href="encontrar.html"><b>Encontrar voluntários</b></a></div>
+                    </div>
+            </div>
+            <img src="img/globo.png" alt="Globo ConexãoDoBem">
+        </div>
+    </main>
+    <footer>
+        <div style="
+            background-color: rgb(52, 52, 52);
+            height: 210px;">
+            <div class="rodape">
+                <div>
+                    <b>ConexãoDoBem</b><br>Conectando pessoas, ONGs e empresas para um<br>impacto maior.
+                </div>
+                <div>
+                    <b>Contato</b><br>E-mail: <a href="conexaodobem@gmail.com" style="color: white;">conexaodobem@gmail.com</a><br>São Caetano do Sul - SP
+                </div>
+            </div>
+            <div style="
+            color: white;
+            text-align: center;
+            padding-top: 12px;">
+                © 2026 ConexãoDoBem. Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Web, Fatec São Caetano do Sul. 
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
