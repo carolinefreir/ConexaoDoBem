@@ -1,0 +1,266 @@
+﻿Escopo do Projeto
+
+
+5.1. Identificação
+
+
+Nome do projeto: ConexãoDoBem - Conexões que transformam
+
+
+Integrantes:
+* Bianca Furlan Vieira Paez 
+* Caroline Freir de Lima
+* Erica Cristina dos Santos Teixeira
+* Jéssica Aguiar Serra
+* Julia de Lira Pedro
+* Nathalia Mamontow Leme da Silva
+
+
+Data: 25/11/2026
+
+
+Professor: Paulo Fratta
+
+
+Disciplina: Desenvolvimento Web
+
+
+5.2. Contexto e Justificativa
+O projeto ConexãoDoBem - Conexões que transformam aborda a dificuldade de conectar organizações não governamentais (ONGs) que desenvolvem iniciativas de impacto social e ambiental às pessoas e empresas que desejam contribuir com essas causas.
+Segundo a pesquisa Voluntariado no Brasil 2026, realizada pelo Datafolha, 60% dos brasileiros com 16 anos ou mais já realizaram algum tipo de trabalho voluntário ao longo da vida. Entretanto, 65% da população não participa atualmente dessas atividades. Entre os principais motivos estão a falta de tempo, mencionada por 52% dos entrevistados, e a dificuldade de saber por onde começar ou de conhecer organizações e projetos que necessitam de apoio, apontada por 12% (FOLHA DE S.PAULO, 2026). A pesquisa destaca ainda o potencial das empresas na promoção do voluntariado, ao incentivar o engajamento social e conectar seus colaboradores a diferentes causas.
+O cenário é ainda mais evidente entre os jovens. Dados do IBGE mostram que 7,3 milhões de brasileiros realizaram trabalho voluntário em 2022, mas a taxa de participação entre pessoas de 14 a 24 anos foi de apenas 2,5%, a menor entre todas as faixas etárias (IBGE, 2023). Ao mesmo tempo, grande parte das organizações sem fins lucrativos depende de voluntários para manter suas atividades. Estudos sobre motivação no voluntariado indicam que, para os mais jovens, fatores ligados à carreira e ao reconhecimento da participação têm peso significativo (CAVALCANTE, 2013).
+Diante desse cenário, identifica-se a necessidade de facilitar o acesso às informações sobre iniciativas sociais e ambientais, ampliar a visibilidade das ONGs e aproximar essas organizações de possíveis voluntários, doadores e empresas parceiras. Para isso, o projeto propõe o desenvolvimento de uma plataforma digital que reúna informações sobre diferentes ONGs, permitindo que cada organização apresente sua área de atuação, seus projetos, os resultados alcançados e suas necessidades atuais. A plataforma também possibilitará a divulgação de oportunidades de voluntariado presencial ou remoto, o que amplia as possibilidades de participação para quem tem pouco tempo disponível, além de demandas por recursos financeiros, materiais e outros tipos de apoio. Como incentivo à participação dos jovens, o ConexãoDoBem oferecerá certificados que poderão ser aproveitados como horas de atividades complementares.
+A relevância do tema está em conectar as duas pontas de um mesmo problema: de um lado, instituições que precisam de apoio; de outro, pessoas e empresas dispostas a contribuir, mas que muitas vezes não sabem como fazê-lo. Ao tornar a busca por oportunidades mais acessível e fortalecer a divulgação do trabalho realizado pelas organizações, o projeto gera impacto social e ambiental ao ampliar o alcance de iniciativas que atuam nessas causas, ao mesmo tempo em que contribui para a formação cidadã e profissional dos participantes.
+
+
+5.3. Objetivos
+Objetivo geral
+Desenvolver uma plataforma web acessível que conecte ONGs de impacto social e ambiental a voluntários, doadores e empresas parceiras, com foco especial no engajamento de jovens estudantes por meio de certificados aproveitáveis como horas de atividades complementares.
+Objetivos específicos
+1. Apresentar, até a entrega final, pelo menos 6 ONGs fictícias, cada uma com área de atuação, projetos, resultados alcançados e necessidades atuais, além de 10 oportunidades de voluntariado.
+2. Permitir que o visitante chegue a qualquer oportunidade de voluntariado em no máximo 3 cliques a partir da página inicial.
+3. Atingir nota mínima de 90 em acessibilidade no Lighthouse em todas as páginas, com navegação completa possível apenas pelo teclado.
+4. Publicar as 10 páginas sem nenhum erro no validador do W3C.
+5. Manter cada imagem do site com no máximo 200 KB, reduzindo o consumo de dados e o tempo de carregamento, em coerência com a proposta de sustentabilidade.
+5.4. Público-Alvo 
+O público-alvo do ConexãoDoBem é composto por pessoas e organizações interessadas em participar ou promover ações de impacto social e ambiental, facilitando a conexão entre ONGs, voluntários, doadores e empresas parceiras.
+5.4.1. Descrição dos usuários
+A plataforma será direcionada principalmente a:
+* Jovens e estudantes (16 a 29 anos): interessados em realizar trabalho voluntário, participar de projetos sociais e ambientais e obter certificados para atividades complementares acadêmicas.
+* Pessoas interessadas em voluntariado e doações: indivíduos que desejam contribuir com causas sociais, mas encontram dificuldades para localizar organizações confiáveis e oportunidades compatíveis com sua disponibilidade.
+* ONGs e organizações sociais: instituições que precisam divulgar suas causas, apresentar resultados, captar doações e encontrar voluntários para suas atividades.
+* Empresas parceiras: organizações que buscam apoiar iniciativas sociais e ambientais por meio de doações, parcerias e programas de voluntariado corporativo.
+* Pessoas com deficiência: público que deve encontrar informações acessíveis sobre as oportunidades, os recursos de acessibilidade disponíveis e as condições de participação nos projetos.
+5.4.2. Necessidades e principais dificuldades
+Cada perfil apresenta necessidades específicas que a plataforma pretende atender:
+* Voluntários e estudantes: dificuldade para encontrar oportunidades, falta de tempo e desconhecimento sobre como começar. O site permitirá pesquisar vagas por causa, localização, modalidade (presencial ou remota) e disponibilidade, além de consultar informações sobre certificados.
+* ONGs: dificuldade para ampliar sua visibilidade, divulgar necessidades e atrair pessoas interessadas. A plataforma permitirá criar perfis institucionais, apresentar projetos, divulgar vagas e informar necessidades de recursos e doações.
+* Empresas: necessidade de encontrar organizações confiáveis e projetos alinhados aos seus valores e objetivos de responsabilidade social e ambiental. O site facilitará a descoberta de iniciativas e o estabelecimento de parcerias.
+* Pessoas com deficiência: possíveis barreiras de navegação e falta de informações sobre acessibilidade. A plataforma priorizará recursos de acessibilidade digital e informações claras sobre as condições de participação nas atividades.
+5.4.3. Como o site ajudará esses usuários
+O ConexãoDoBem reunirá informações e oportunidades em um único ambiente digital, facilitando a descoberta de causas, a divulgação de projetos e a conexão entre pessoas e organizações. A plataforma buscará tornar o voluntariado mais acessível, transparente e organizado, incentivando a participação social e fortalecendo iniciativas de impacto positivo.
+5.4.4. Faixa etária e localização
+O público poderá abranger pessoas a partir dos 16 anos, respeitando as condições de participação e os requisitos específicos de cada oportunidade. A plataforma terá alcance nacional, permitindo a conexão entre usuários e organizações de diferentes regiões do Brasil, com opções de participação presencial e remota.
+5.4.5. Onde o público poderá utilizar a plataforma
+O site poderá ser acessado por computadores, notebooks, tablets e celulares com conexão à internet. A interface deverá ser responsiva, intuitiva e acessível, facilitando o uso por pessoas com diferentes níveis de familiaridade com a tecnologia e por pessoas com deficiência.
+
+
+5.5. Escopo Funcional (o que o site terá)
+Estrutura do site (UX)
+1. Página Inicial (Home): apresenta o propósito da plataforma, os dados que justificam o projeto (Datafolha e IBGE) e notícias recentes sobre voluntariado, com atalhos para voluntários e ONGs.
+2. Como Funciona: explica o passo a passo para quem quer ser voluntário, para as ONGs e como funciona o certificado de horas. Traz também uma tabela com dados de impacto do voluntariado no Brasil e a seção de mídia, com vídeo legendado, áudio e mapa.
+3. Quem Somos: apresenta a história, a missão, a visão e os valores da plataforma, uma galeria com as causas apoiadas e as medidas de acessibilidade e inclusão para pessoas com deficiência.
+4. Quero me Voluntariar: lista as oportunidades de voluntariado, presenciais e remotas, com ONG, causa, local, carga horária e condições de acessibilidade.
+5. Encontrar Voluntários: página voltada às ONGs, com as vantagens de se cadastrar e um formulário de cadastro da organização.
+6. Seja Colaborador: mostra as formas de apoio para empresas e doadores, as ONGs parceiras com seus resultados e as necessidades atuais de doação.
+7. Teste de Aptidão: questionário que indica, de acordo com o perfil da pessoa, qual causa de voluntariado combina mais com ela. O resultado é calculado automaticamente.
+8. Perguntas Frequentes: respostas às dúvidas mais comuns sobre voluntariado, certificado e cadastro de ONGs.
+9. Contato: formulário de contato com validação dos campos, dados de contato da plataforma e apresentação da equipe. 
+10. Orçamento de Hospedagem: comparativo de três hospedagens e três domínios, com preços, tabela e justificativa da escolha.
+
+
+
+
+
+
+5.6. Escopo Não Funcional 
+O ConexãoDoBem deverá atender a requisitos de qualidade relacionados à acessibilidade, usabilidade, desempenho, sustentabilidade, responsividade, SEO e segurança.
+Acessibilidade: as páginas deverão utilizar textos alternativos descritivos em todas as imagens informativas, contraste adequado entre texto e fundo (mínimo de 4,5:1 para textos comuns, conforme as diretrizes WCAG nível AA), navegação completa por teclado com indicação visível de foco e estrutura semântica HTML5, com a linguagem da página definida como pt-BR. Atributos ARIA serão utilizados quando necessários. O conteúdo deverá considerar usuários de leitores de tela e outras tecnologias assistivas, e a nota mínima de 90 em acessibilidade no Lighthouse deverá ser alcançada em todas as páginas.
+Sustentabilidade: o conteúdo deverá incentivar práticas responsáveis e apresentar informações relacionadas ao impacto social e ambiental das iniciativas das ONGs. O projeto também buscará reduzir o consumo desnecessário de recursos digitais, por meio da compressão e da conversão das imagens para formatos mais leves, como WebP, com no máximo 200 KB por imagem.
+Responsividade: o layout deverá adaptar-se a computadores, tablets e celulares, utilizando Flexbox, Grid e media queries, de modo a garantir leitura e navegação adequadas, sem rolagem horizontal, em diferentes tamanhos de tela.
+Desempenho: o código HTML e CSS deverá ser organizado e validado, e as imagens e demais recursos deverão ser otimizados para reduzir o tempo de carregamento.
+SEO básico: as páginas deverão utilizar títulos (title) descritivos e únicos, meta descrições e hierarquia adequada de títulos HTML (um único h1 por página, seguido de h2 e h3), contribuindo para a compreensão do conteúdo pelos mecanismos de busca.
+Segurança e privacidade: o site deverá ser publicado com HTTPS no Railway. O projeto deverá evitar a exposição desnecessária de dados pessoais e considerar os princípios da Lei Geral de Proteção de Dados (LGPD), especialmente no formulário de contato, coletando apenas os dados indispensáveis. Caso sejam implementados cadastros e armazenamento de senhas em versões futuras (como a versão com PHP/MySQLi), serão necessárias medidas adicionais de segurança, incluindo o armazenamento seguro de senhas criptografadas.
+Usabilidade: a interface deverá apresentar organização visual consistente, textos claros, links identificáveis e navegação intuitiva, permitindo que o visitante chegue a qualquer oportunidade de voluntariado em no máximo 3 cliques a partir da página inicial.
+
+
+5.7. Mapa do Site 
+  
+
+
+
+5.8. Conteúdo e Identidade Visual
+A identidade visual do ConexãoDoBem busca transmitir confiança e impacto visual. Com as cores predominantes sendo azul e laranja, o azul transmite calmaria e estabilidade e o laranja, o oposto, estimulando e trazendo movimento. 
+  
+
+Com isso, evita que o visual fique monótono devido ao balanceamento do significado das cores predominantes. 
+* Logo: contém um globo transmitindo a ideia do mundo conectado pelo bem do voluntariado, o nome do projeto com as cores principais e, abaixo, nosso slogan “Conexões que transformam” comunicando a conceito da força da união. 
+  
+
+5.9. Tecnologias e Ferramentas
+O site ConexãoDoBem - Conexões que transformam será desenvolvido com HTML5 e CSS3. O HTML5 será responsável pela estrutura das páginas, com o uso de tags semânticas (header, nav, main, section, article e footer) e de recursos de acessibilidade, como textos alternativos nas imagens, a definição do idioma da página (lang="pt-BR") e atributos ARIA quando necessário. O CSS3 será utilizado para aplicar a identidade visual do projeto e construir um layout responsivo, com Flexbox, Grid e media queries, permitindo que o site se adapte a celulares, tablets e computadores. O JavaScript foi utilizado para o formulário de Teste de Aptidão, calculando o resultado sozinho, mostra o perfil e destaca o card dele.
+O código será escrito no Visual Studio Code e versionado com Git, em um repositório compartilhado no GitHub. Essa organização permite que todos os integrantes trabalhem no projeto, acompanhem o histórico de alterações e revertam mudanças quando necessário.
+Para garantir a qualidade do site, o código HTML, CSS e JavaScript serão validados nos validadores oficiais do W3C (Markup Validation Service e CSS Validation Service). A acessibilidade, o desempenho e o SEO serão avaliados com a ferramenta Lighthouse, do Chrome DevTools, e a responsividade será testada no modo de dispositivo do mesmo navegador, simulando diferentes tamanhos de tela. As imagens serão comprimidas e convertidas para formatos mais leves, como WebP, reduzindo o tempo de carregamento e o consumo de dados, em coerência com a proposta de sustentabilidade do projeto.
+A hospedagem será feita no Railway (https://railway.com/), uma plataforma all-in-one que simplifica o deploy e oferece auto-configuração, previews instantâneos, networking automático (SSL e load balancing), escalabilidade, monitoramento integrado e limites de gastos rígidos. O repositório do GitHub será conectado ao Railway, de modo que cada atualização enviada ao repositório gere automaticamente uma nova versão publicada do site, acessível de forma segura via HTTPS.
+5.10. Cronograma e Divisão de Tarefas
+O desenvolvimento do projeto ConexãoDoBem - Conexões que transformam, será organizado em etapas, com as atividades distribuídas entre os integrantes da equipe de acordo com suas funções e responsabilidades. O acompanhamento dos prazos será realizado por meio da plataforma Trello, permitindo visualizar as tarefas pendentes, em andamento, em revisão e concluídas.
+Os prazos serão definidos de acordo com a data oficial de entrega e a disponibilidade das integrantes. A líder ficará responsável por acompanhar o andamento das tarefas, verificar possíveis atrasos, organizar a comunicação e auxiliar na integração das entregas.
+Divisão de Tarefas
+Integrante
+	Função
+	Responsabilidades
+	Bianca Furlan
+	Qualidade, Acessibilidade e Testes
+	Verificar a acessibilidade, o contraste, a navegação por teclado, a responsividade e validação do código. Registrar capturas de tela da página inicial nas versões desktop, celular e definir os critérios de aceitação.
+	Caroline Freir
+	Design e Identidade Visual
+	Definir a identidade visual do projeto, incluindo tipografia, paleta de cores, logotipo, tom de voz e seleção, otimização das imagens e padronização visual da apresentação.
+	Érica Teixeira
+	Público-Alvo e Estrutura do Site
+	Definir o público-alvo, descrever as funcionalidades e elaborar o mapa de navegação com as dez páginas do site.
+	Jéssica Aguiar
+	Pesquisa e Conteúdo
+	Elaborar o contexto e a justificativa, os objetivos e os riscos e as restrições do projeto. Desenvolver os textos e chamadas da página inicial.
+	Julia de Lira
+	Líder/Gestora do projeto
+	Organizar o cronograma no Trello, acompanhar os prazos, elaborar as seções do escopo, revisar as entregas conforme os critérios de avaliação, organizar os arquivos finais e realizar a entrega no Teams.
+	Nathalia Mamontow
+	Desenvolvimento Front-End
+	Desenvolver a página inicial utilizando HTML e CSS, implementar a estrutura semântica e a responsividade, publicar o código no GitHub, além de realizar testes de hospedagens no Railway, se possível.
+	
+
+Cronograma de execução
+
+
+Etapa
+	Atividades previstas
+	Responsáveis
+	Data de entrega
+	Planejamento 
+	Organização da equipe, separação e definição das tarefas.
+	Toda equipe
+	08/10/2026
+	Organização das entregas 
+	Criação do Trello, elaboração do cronograma.
+	Julia
+	09/10/2026
+	Documentação
+	Elaboração das seções do escopo.
+	Toda equipe
+	14/10/2026
+	Reunião para mediação das etapas
+	Controle das tarefas realizadas, possíveis dificuldades e etapas a serem feitas.
+	Toda equipe
+	15/10/2026
+	Identidade visual
+	Entregar logotipo e identidade
+	Caroline
+	17/10/2026
+	Desenvolvimento do MVP
+	Produção da página com posterior validação e testes. 
+	Natália e Bianca com apoio da equipe
+	20/10/2026
+	Finalização
+	Finalização do escopo, slides e arquivos.
+	Julia
+	21/10/2026
+	Entrega Parcial
+	Entrega do MVP, com apresentação dos slides e arquivos
+	Julia
+	22/10/2026
+	Realização do restante das páginas
+	Prompt para IA desenvolver conclusão das páginas.
+	Toda a equipe.
+	06/11/2026
+	Testes
+	W3C Validator em todas as páginas e teste de navegação pelo teclado.
+	Toda a equipe.
+	13/11/2026
+	Slide e GitHub
+	Finalização dos slides para apresentação e GitHub.
+	Toda a equipe.
+	20/11/2026
+	Entrega Final
+	Entrega dos slides e arquivos.
+	Toda a equipe.
+	25/11/2026
+	
+
+
+
+5.11. Riscos e Restrições
+Foi identificado alguns riscos que podem afetar o cronograma e a qualidade da entrega:
+* Atrasos na execução das tarefas individuais.
+* Dificuldades técnicas com HTML5, CSS3 ou ferramentas de hospedagem.
+* Problemas na integração dos arquivos desenvolvidos por diferentes integrantes.
+* Dificuldades para implementar os requisitos de acessibilidade e responsividade.
+* Curto período de tempo para revisar e testar todas as páginas.
+* Uso de imagens ou informações sem a devida verificação de fontes e direitos de utilização.
+Medidas preventivas:
+* Estabelecer prazos intermediários e acompanhar/gerenciar as tarefas pelo Trello.
+* Distribuir as atividades conforme os conhecimentos e a disponibilidade das integrantes.
+* Manter uma estrutura padronizada para os arquivos e componentes do site.
+* Realizar testes durante o desenvolvimento, e não apenas na etapa final.
+* Priorizar as funcionalidades obrigatórias e reservar tempo para revisão.
+* Verificar as fontes e as condições de uso dos conteúdos utilizados.
+
+
+5.12. Critérios para a entrega final:
+* A página inicial deverá estar desenvolvida em HTML5 e CSS3.
+* A Home deverá apresentar menu, conteúdo principal e rodapé.
+* A estrutura deverá utilizar elementos semânticos adequados (header, nav, main, section, article e footer).
+* A interface deverá apresentar identidade visual consistente e adaptação a diferentes telas.
+* Deverão ser aplicadas medidas de acessibilidade, como textos alternativos, contraste adequado e navegação por teclado.
+* O código da Home deverá ser validado nos validadores do W3C (HTML e CSS), sem erros.
+* O escopo do projeto deverá conter todas as seções previstas no roteiro do professor.
+* A apresentação deverá conter as informações solicitadas e imagens da Home, nas versões desktop e celular.
+* Deverá ser entregue um print da página principal em formato PNG.
+Critérios para a entrega final:
+* O site deverá conter dez páginas HTML interligadas e navegáveis.
+* Todas as páginas deverão apresentar estrutura e identidade visual consistentes.
+* O site deverá apresentar pelo menos 6 ONGs fictícias e 10 oportunidades de voluntariado.
+* Qualquer oportunidade de voluntariado deverá ser acessível em no máximo 3 cliques a partir da página inicial.
+* O formulário de contato deverá possuir os campos e as validações HTML5 previstos.
+* Os recursos multimídia deverão estar incorporados conforme as orientações da atividade.
+* O site deverá atender aos requisitos de acessibilidade e responsividade, com nota mínima de 90 em acessibilidade no Lighthouse em todas as páginas e navegação completa apenas pelo teclado.
+* Cada imagem do site deverá ter no máximo 200 KB.
+* O código deverá ser verificado por ferramentas de validação (W3C), com correção dos erros identificados, e as 10 páginas deverão ser aprovadas sem erros.
+* A documentação deverá estar organizada.
+* O site deverá estar publicado no Railway, com HTTPS, e funcionando adequadamente.
+* O código-fonte e os demais materiais solicitados deverão ser entregues nos formatos estabelecidos.
+Critérios de Aceitação
+Foi alcançada a nota 100 em acessibilidade no Lighthouse em ambas versões do home em desktop e mobile, assim como no restante das páginas.
+  
+
+
+
+  
+
+Validações no W3C (CSS e HTML) realizadas, concluindo nenhum erro nos códigos na página home nas outras páginas.
+  
+  
+
+
+
+
+
+
+
+5.13. Aprovação 
+Paulo Sergio Fratta Junior.
+
+
+REFERÊNCIAS
+CAVALCANTE, Carlos Eduardo. Motivação no trabalho voluntário: delineamento de estudos no Brasil. Revista Estudos do CEPE, Santa Cruz do Sul, n. 38, p. 161-182, jul./dez. 2013. Disponível em: https://seer.unisc.br/index.php/cepe/article/view/3719. Acesso em: 15 Out. 2026.
+FOLHA DE S.PAULO. Três em cada cinco brasileiros já realizaram algum trabalho voluntário, aponta Datafolha. Folha Social+, 28 ago. 2026. Disponível em: https://www1.folha.uol.com.br/folha-social-mais/2026/08/tres-em-cada-cinco-brasileiros-ja-realizaram-algum-trabalho-voluntario-aponta-datafolha.shtml. Acesso em: 10 Out. 2026. 
+IBGE. Pesquisa Nacional por Amostra de Domicílios Contínua: outras formas de trabalho 2022. Rio de Janeiro: IBGE, 2023. Disponível em: https://biblioteca.ibge.gov.br/visualizacao/livros/liv102020_informativo.pdf. Acesso em: 15 Out. 2026.
