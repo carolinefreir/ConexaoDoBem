@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sua ONG precisa de voluntários? Cadastre a organização na ConexãoDoBem, divulgue oportunidades presenciais ou remotas e encontre pessoas dispostas a ajudar.">
+    <title>ConexãoDoBem | Encontrar voluntários</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Aparece ao apertar Tab: leva direto ao conteúdo -->
+    <a class="pular_conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho_conteudo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ConexãoDoBem - página inicial" class="logo" width="336" height="80">
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="como_funciona.html">Como funciona?</a></li>
+                    <li><a href="quem_somos.html">Quem somos?</a></li>
+                    <li><a href="colaborador.html">Seja colaborador</a></li>
+                    <li><a href="teste.html">Teste de Aptidão</a></li>
+                    <li><a href="perguntas.html">Perguntas Frequentes</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="topo_pagina" aria-labelledby="titulo_pagina">
+            <div class="container">
+                <h1 id="titulo_pagina">Encontrar voluntários</h1>
+                <p>Sua ONG precisa de ajuda? Cadastre a organização e divulgue suas oportunidades para pessoas dispostas a contribuir.</p>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo_vantagens">
+            <div class="container">
+                <h2 id="titulo_vantagens">Por que cadastrar sua ONG</h2>
+                <ul class="cards">
+                    <li class="card">
+                        <h3>Mais visibilidade</h3>
+                        <p>Seus projetos aparecem para estudantes, profissionais e empresas que procuram uma causa para apoiar.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Voluntários motivados</h3>
+                        <p>O certificado de horas é um incentivo que atrai jovens que ainda não fazem voluntariado.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Sem custo</h3>
+                        <p>O cadastro e a divulgação das oportunidades são gratuitos para organizações sem fins lucrativos.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="secao secao_alternada" aria-labelledby="titulo_form_ong">
+            <div class="container">
+                <h2 id="titulo_form_ong">Cadastro da ONG</h2>
+                <p>Campos com <span class="obrigatorio">*</span> são obrigatórios.</p>
+
+                <form class="formulario" action="encontrar.html#enviado" method="get">
+                    <div class="campo">
+                        <label for="ong_nome">Nome da ONG <span class="obrigatorio">*</span></label>
+                        <input type="text" id="ong_nome" name="ong_nome" required minlength="3" autocomplete="organization">
+                    </div>
+                    <div class="campo">
+                        <label for="ong_cnpj">CNPJ <span class="obrigatorio">*</span></label>
+                        <input type="text" id="ong_cnpj" name="ong_cnpj" required pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}" placeholder="00.000.000/0000-00" aria-describedby="dica_cnpj">
+                        <span class="dica" id="dica_cnpj">Use o formato 00.000.000/0000-00.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="ong_email">E-mail <span class="obrigatorio">*</span></label>
+                        <input type="email" id="ong_email" name="ong_email" required autocomplete="email">
+                    </div>
+                    <div class="campo">
+                        <label for="ong_telefone">Telefone <span class="obrigatorio">*</span></label>
+                        <input type="tel" id="ong_telefone" name="ong_telefone" required pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(11) 91234-5678" aria-describedby="dica_tel_ong" autocomplete="tel">
+                        <span class="dica" id="dica_tel_ong">Use o formato (11) 91234-5678.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="ong_causa">Causa principal <span class="obrigatorio">*</span></label>
+                        <select id="ong_causa" name="ong_causa" required>
+                            <option value="">Selecione</option>
+                            <option>Reciclagem</option>
+                            <option>Educação</option>
+                            <option>Esporte adaptado</option>
+                            <option>Energias renováveis</option>
+                            <option>Empregabilidade PCD</option>
+                            <option>Consumo consciente</option>
+                            <option>Saúde</option>
+                            <option>Outra</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="ong_vagas">Quantos voluntários vocês procuram? <span class="obrigatorio">*</span></label>
+                        <input type="number" id="ong_vagas" name="ong_vagas" required min="1" max="100" step="1">
+                    </div>
+                    <div class="campo">
+                        <label for="ong_inicio">A partir de quando? <span class="obrigatorio">*</span></label>
+                        <input type="date" id="ong_inicio" name="ong_inicio" required min="2026-11-01">
+                    </div>
+                    <div class="campo">
+                        <label for="ong_descricao">Descreva a atividade <span class="obrigatorio">*</span></label>
+                        <textarea id="ong_descricao" name="ong_descricao" required minlength="20" aria-describedby="dica_descricao"></textarea>
+                        <span class="dica" id="dica_descricao">Conte o que o voluntário vai fazer, onde, em quais horários e as condições de acessibilidade do local.</span>
+                    </div>
+                    <div class="campo_checkbox">
+                        <input type="checkbox" id="ong_lgpd" name="ong_lgpd" required>
+                        <label for="ong_lgpd">Autorizo o uso destes dados apenas para o cadastro na ConexãoDoBem, conforme a LGPD. <span class="obrigatorio">*</span></label>
+                    </div>
+                    <div>
+                        <button type="submit" class="botao">Enviar cadastro</button>
+                    </div>
+                </form>
+
+                <div class="mensagem_enviado" id="enviado" role="status">
+                    <h2>Cadastro enviado!</h2>
+                    <p>Obrigada! Nesta versão do site o envio é uma simulação. Na versão com banco de dados, a equipe da ConexãoDoBem receberá o cadastro e entrará em contato.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape_conteudo">
+            <div>
+                <h2 class="rodape_titulo">ConexãoDoBem</h2>
+                <p>Conexões que transformam.</p>
+                <p>Conectando pessoas, ONGs e empresas para um impacto maior.</p>
+            </div>
+            <div>
+                <h2 class="rodape_titulo">Contato</h2>
+                <address>
+                    <p>E-mail: <a href="mailto:conexaodobem@gmail.com">conexaodobem@gmail.com</a></p>
+                    <p>São Caetano do Sul - SP</p>
+                </address>
+            </div>
+            <nav aria-label="Links do rodapé">
+                <h2 class="rodape_titulo">Navegue</h2>
+                <ul class="rodape_links">
+                    <li><a href="voluntariar.html">Quero me voluntariar</a></li>
+                    <li><a href="encontrar.html">Encontrar voluntários</a></li>
+                    <li><a href="quem_somos.html#acessibilidade">Acessibilidade</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento de hospedagem</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="creditos">© 2026 ConexãoDoBem. Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Front-End, Fatec São Caetano do Sul.</p>
+    </footer>
+    <script src="js/acessibilidade.js"></script>
+    <script src="js/formularios.js"></script>
+</body>
+</html>

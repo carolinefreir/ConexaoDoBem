@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fale com a ConexãoDoBem: envie sua mensagem pelo formulário, veja nossos dados de contato e conheça a equipe do projeto.">
+    <title>ConexãoDoBem | Contato</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Aparece ao apertar Tab: leva direto ao conteúdo -->
+    <a class="pular_conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho_conteudo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ConexãoDoBem - página inicial" class="logo" width="336" height="80">
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="como_funciona.html">Como funciona?</a></li>
+                    <li><a href="quem_somos.html">Quem somos?</a></li>
+                    <li><a href="colaborador.html">Seja colaborador</a></li>
+                    <li><a href="teste.html">Teste de Aptidão</a></li>
+                    <li><a href="perguntas.html">Perguntas Frequentes</a></li>
+                    <li><a href="contato.html" aria-current="page">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="topo_pagina" aria-labelledby="titulo_pagina">
+            <div class="container">
+                <h1 id="titulo_pagina">Contato</h1>
+                <p>Quer ser voluntário, cadastrar uma ONG ou colaborar? Mande sua mensagem.</p>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo_form_contato">
+            <div class="container">
+                <h2 id="titulo_form_contato">Envie sua mensagem</h2>
+                <p>Campos com <span class="obrigatorio">*</span> são obrigatórios.</p>
+
+                <form class="formulario" action="contato.html#enviado" method="get">
+                    <div class="campo">
+                        <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                        <input type="text" id="nome" name="nome" required minlength="3" pattern="[A-Za-zÀ-ÿ ]{3,}" aria-describedby="dica_nome" autocomplete="name">
+                        <span class="dica" id="dica_nome">Use apenas letras e espaços.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="nome@exemplo.com">
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(11) 91234-5678" aria-describedby="dica_telefone" autocomplete="tel">
+                        <span class="dica" id="dica_telefone">Opcional. Use o formato (11) 91234-5678.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="perfil">Você é <span class="obrigatorio">*</span></label>
+                        <select id="perfil" name="perfil" required>
+                            <option value="">Selecione</option>
+                            <option>Voluntário(a)</option>
+                            <option>ONG</option>
+                            <option>Empresa ou doador</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="disponibilidade">A partir de quando você pode começar?</label>
+                        <input type="date" id="disponibilidade" name="disponibilidade" min="2026-11-01">
+                    </div>
+                    <div class="campo">
+                        <label for="horas">Quantas horas por semana você tem disponíveis?</label>
+                        <input type="number" id="horas" name="horas" min="1" max="40" step="1" aria-describedby="dica_horas">
+                        <span class="dica" id="dica_horas">De 1 a 40 horas.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="mensagem">Mensagem <span class="obrigatorio">*</span></label>
+                        <textarea id="mensagem" name="mensagem" required minlength="10"></textarea>
+                    </div>
+                    <div class="campo_checkbox">
+                        <input type="checkbox" id="lgpd" name="lgpd" required>
+                        <label for="lgpd">Autorizo o uso destes dados apenas para responder ao meu contato, conforme a LGPD. <span class="obrigatorio">*</span></label>
+                    </div>
+                    <div>
+                        <button type="submit" class="botao">Enviar mensagem</button>
+                    </div>
+                </form>
+
+                <div class="mensagem_enviado" id="enviado" role="status">
+                    <h2>Mensagem enviada!</h2>
+                    <p>Obrigada pelo contato. Nesta versão do site o envio é uma simulação. Na versão com banco de dados, a mensagem chegará à equipe da ConexãoDoBem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao secao_alternada" aria-labelledby="titulo_dados">
+            <div class="container">
+                <h2 id="titulo_dados">Nossos dados</h2>
+                <address>
+                    <p><strong>E-mail:</strong> <a href="mailto:conexaodobem@gmail.com">conexaodobem@gmail.com</a></p>
+                    <p><strong>Telefone:</strong> (11) 90000-0000</p>
+                    <p><strong>Endereço:</strong> Rua Bel Aliance, 225 - Jardim São Caetano, São Caetano do Sul - SP (Fatec São Caetano do Sul)</p>
+                    <p><strong>Atendimento:</strong> segunda a sexta, das 9h às 18h</p>
+                </address>
+                <p class="fonte">Telefone e horário de atendimento fictícios, criados para o projeto acadêmico.</p>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo_equipe">
+            <div class="container">
+                <h2 id="titulo_equipe">Equipe</h2>
+                <p>A ConexãoDoBem foi desenvolvida por alunas do curso de Análise e Desenvolvimento de Sistemas da Fatec São Caetano do Sul.</p>
+                <ul class="equipe">
+                    <li><strong>Julia de Lira</strong> Líder</li>
+                    <li><strong>Nathália Mamontow</strong> Desenvolvimento</li>
+                    <li><strong>Caroline Freire</strong> Design</li>
+                    <li><strong>Erica Teixeira</strong> Pesquisa</li>
+                    <li><strong>Jéssica Serra</strong> Pesquisa</li>
+                    <li><strong>Bianca Furlan</strong> Qualidade e Testes</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape_conteudo">
+            <div>
+                <h2 class="rodape_titulo">ConexãoDoBem</h2>
+                <p>Conexões que transformam.</p>
+                <p>Conectando pessoas, ONGs e empresas para um impacto maior.</p>
+            </div>
+            <div>
+                <h2 class="rodape_titulo">Contato</h2>
+                <address>
+                    <p>E-mail: <a href="mailto:conexaodobem@gmail.com">conexaodobem@gmail.com</a></p>
+                    <p>São Caetano do Sul - SP</p>
+                </address>
+            </div>
+            <nav aria-label="Links do rodapé">
+                <h2 class="rodape_titulo">Navegue</h2>
+                <ul class="rodape_links">
+                    <li><a href="voluntariar.html">Quero me voluntariar</a></li>
+                    <li><a href="encontrar.html">Encontrar voluntários</a></li>
+                    <li><a href="quem_somos.html#acessibilidade">Acessibilidade</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento de hospedagem</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="creditos">© 2026 ConexãoDoBem. Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Front-End, Fatec São Caetano do Sul.</p>
+    </footer>
+    <script src="js/acessibilidade.js"></script>
+    <script src="js/formularios.js"></script>
+</body>
+</html>

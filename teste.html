@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responda 5 perguntas rápidas e descubra qual causa de voluntariado combina com você: meio ambiente, educação, inclusão ou esporte adaptado.">
+    <title>ConexãoDoBem | Teste de Aptidão</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript só desta página: calcula o resultado do teste -->
+    <script src="js/teste.js" defer></script>
+</head>
+<body>
+    <!-- Aparece ao apertar Tab: leva direto ao conteúdo -->
+    <a class="pular_conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <div class="cabecalho_conteudo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ConexãoDoBem - página inicial" class="logo" width="336" height="80">
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="como_funciona.html">Como funciona?</a></li>
+                    <li><a href="quem_somos.html">Quem somos?</a></li>
+                    <li><a href="colaborador.html">Seja colaborador</a></li>
+                    <li><a href="teste.html" aria-current="page">Teste de Aptidão</a></li>
+                    <li><a href="perguntas.html">Perguntas Frequentes</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="topo_pagina" aria-labelledby="titulo_pagina">
+            <div class="container">
+                <h1 id="titulo_pagina">Teste de Aptidão</h1>
+                <p>Responda 5 perguntas rápidas e descubra qual causa combina mais com você.</p>
+            </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo_perguntas_teste">
+            <div class="container">
+                <h2 id="titulo_perguntas_teste">Perguntas</h2>
+                <p>Marque uma opção em cada pergunta e clique em "Ver meu resultado".</p>
+                <form class="formulario" id="form_teste" action="teste.html#resultados" method="get">
+                    <fieldset class="pergunta_teste">
+                        <legend>1. Em um sábado livre, o que você mais gostaria de fazer?</legend>
+                        <div class="opcao">
+                            <input type="radio" id="p1a" name="pergunta1" value="A" required>
+                            <label for="p1a"><strong>A)</strong> Cuidar de uma praça ou de uma horta</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p1b" name="pergunta1" value="B">
+                            <label for="p1b"><strong>B)</strong> Ensinar algo que eu sei para alguém</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p1c" name="pergunta1" value="C">
+                            <label for="p1c"><strong>C)</strong> Ajudar alguém a conseguir uma oportunidade</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p1d" name="pergunta1" value="D">
+                            <label for="p1d"><strong>D)</strong> Praticar ou assistir a um esporte</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="pergunta_teste">
+                        <legend>2. Qual assunto mais chama a sua atenção nas notícias?</legend>
+                        <div class="opcao">
+                            <input type="radio" id="p2a" name="pergunta2" value="A" required>
+                            <label for="p2a"><strong>A)</strong> Meio ambiente e clima</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p2b" name="pergunta2" value="B">
+                            <label for="p2b"><strong>B)</strong> Educação e escolas</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p2c" name="pergunta2" value="C">
+                            <label for="p2c"><strong>C)</strong> Direitos e inclusão de pessoas</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p2d" name="pergunta2" value="D">
+                            <label for="p2d"><strong>D)</strong> Esportes e saúde</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="pergunta_teste">
+                        <legend>3. Como você prefere ajudar?</legend>
+                        <div class="opcao">
+                            <input type="radio" id="p3a" name="pergunta3" value="A" required>
+                            <label for="p3a"><strong>A)</strong> Colocando a mão na massa ao ar livre</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p3b" name="pergunta3" value="B">
+                            <label for="p3b"><strong>B)</strong> Explicando e tirando dúvidas</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p3c" name="pergunta3" value="C">
+                            <label for="p3c"><strong>C)</strong> Ouvindo e orientando pessoas</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p3d" name="pergunta3" value="D">
+                            <label for="p3d"><strong>D)</strong> Organizando atividades em grupo</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="pergunta_teste">
+                        <legend>4. Qual destas habilidades é mais a sua cara?</legend>
+                        <div class="opcao">
+                            <input type="radio" id="p4a" name="pergunta4" value="A" required>
+                            <label for="p4a"><strong>A)</strong> Organização e cuidado com detalhes</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p4b" name="pergunta4" value="B">
+                            <label for="p4b"><strong>B)</strong> Paciência e didática</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p4c" name="pergunta4" value="C">
+                            <label for="p4c"><strong>C)</strong> Empatia e boa comunicação</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p4d" name="pergunta4" value="D">
+                            <label for="p4d"><strong>D)</strong> Energia e trabalho em equipe</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="pergunta_teste">
+                        <legend>5. Que resultado deixaria você mais orgulhoso?</legend>
+                        <div class="opcao">
+                            <input type="radio" id="p5a" name="pergunta5" value="A" required>
+                            <label for="p5a"><strong>A)</strong> Um bairro mais limpo e sustentável</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p5b" name="pergunta5" value="B">
+                            <label for="p5b"><strong>B)</strong> Uma criança que aprendeu a ler</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p5c" name="pergunta5" value="C">
+                            <label for="p5c"><strong>C)</strong> Uma pessoa que conseguiu um emprego</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="p5d" name="pergunta5" value="D">
+                            <label for="p5d"><strong>D)</strong> Um atleta que venceu uma competição</label>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <button type="submit" class="botao">Ver meu resultado</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="secao secao_alternada" id="resultados" aria-labelledby="titulo_resultados">
+            <div class="container">
+                <h2 id="titulo_resultados">Resultado</h2>
+                <!-- O JavaScript escreve o resultado aqui; aria-live faz o leitor de tela anunciar -->
+                <p class="resultado_automatico" id="resultado_automatico" tabindex="-1" aria-live="polite" hidden></p>
+                <p>Estes são os quatro perfis. Se der empate, as duas causas combinam com você.</p>
+                <ul class="cards cards_duas_colunas">
+                    <li class="card" id="perfil_A">
+                        <h3>Maioria A: Guardião do meio ambiente</h3>
+                        <p>Você gosta de cuidar do planeta na prática. Combina com reciclagem, energia solar e consumo consciente.</p>
+                        <a href="voluntariar.html">Ver oportunidades de meio ambiente</a>
+                    </li>
+                    <li class="card" id="perfil_B">
+                        <h3>Maioria B: Educador do bem</h3>
+                        <p>Você tem paciência e gosta de ensinar. Combina com reforço escolar e oficinas educativas.</p>
+                        <a href="voluntariar.html">Ver oportunidades de educação</a>
+                    </li>
+                    <li class="card" id="perfil_C">
+                        <h3>Maioria C: Agente de inclusão</h3>
+                        <p>Você é empático e bom ouvinte. Combina com mentorias de empregabilidade para pessoas com deficiência.</p>
+                        <a href="voluntariar.html">Ver oportunidades de inclusão</a>
+                    </li>
+                    <li class="card" id="perfil_D">
+                        <h3>Maioria D: Parceiro do esporte</h3>
+                        <p>Você tem energia e gosta de trabalhar em grupo. Combina com o apoio a treinos e eventos de esporte adaptado.</p>
+                        <a href="voluntariar.html">Ver oportunidades de esporte</a>
+                    </li>
+                </ul>
+                <p class="fonte">O resultado é calculado automaticamente. Se o JavaScript estiver desativado no navegador, confira qual letra você marcou mais vezes.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape_conteudo">
+            <div>
+                <h2 class="rodape_titulo">ConexãoDoBem</h2>
+                <p>Conexões que transformam.</p>
+                <p>Conectando pessoas, ONGs e empresas para um impacto maior.</p>
+            </div>
+            <div>
+                <h2 class="rodape_titulo">Contato</h2>
+                <address>
+                    <p>E-mail: <a href="mailto:conexaodobem@gmail.com">conexaodobem@gmail.com</a></p>
+                    <p>São Caetano do Sul - SP</p>
+                </address>
+            </div>
+            <nav aria-label="Links do rodapé">
+                <h2 class="rodape_titulo">Navegue</h2>
+                <ul class="rodape_links">
+                    <li><a href="voluntariar.html">Quero me voluntariar</a></li>
+                    <li><a href="encontrar.html">Encontrar voluntários</a></li>
+                    <li><a href="quem_somos.html#acessibilidade">Acessibilidade</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento de hospedagem</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="creditos">© 2026 ConexãoDoBem. Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Front-End, Fatec São Caetano do Sul.</p>
+    </footer>
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>
