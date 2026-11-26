@@ -1,0 +1,1153 @@
+/* =========================================================
+   ConexãoDoBem - Folha de estilos do site inteiro
+   Um único arquivo para as 10 páginas, para todas ficarem iguais.
+
+   Organização:
+   1. Cores e ajustes gerais
+   2. Acessibilidade (pular conteúdo, foco)
+   3. Cabeçalho e menu
+   4. Componentes usados em várias páginas
+      (topo das páginas, seções, botões, cards, tabelas,
+       formulários, galeria, mídia, perguntas)
+   5. Partes específicas da Home
+   6. Rodapé
+   7. Media queries: tablet (768px), desktop (1024px) e
+      telas largas (1200px, só para o cabeçalho)
+
+   Mobile first: primeiro vem o estilo do celular. As media
+   queries do final só mudam o que é diferente em telas maiores.
+   ========================================================= */
+
+
+/* ---------- 1. Cores e ajustes gerais ---------- */
+
+/* Cores do projeto, definidas uma vez só */
+:root {
+    --azul: #141D93;           /* menu, botões e títulos (contraste 12,9 com branco) */
+    --azul_escuro: #0C1260;
+    --laranja: #f98417;        /* bordas e detalhes (não usar em texto sobre fundo claro) */
+    --laranja_texto: #C96300;  /* títulos grandes sobre fundo claro */
+    --cinza_texto: #343434;
+    --cinza_suave: #555555;
+    --creme: #FFF7F0;
+    --pessego: #ffe6d1;
+    --borda: #F0D9C6;
+    --verde_ok: #1B6B2F;
+    --vermelho_erro: #B3261E;
+    --raio: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* A barra de acessibilidade muda este valor (100%, 115%, 130%, 150%) */
+    font-size: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: var(--cinza_texto);
+    line-height: 1.6;
+    background-color: white;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+a {
+    color: var(--azul);
+}
+
+/* Centraliza o conteúdo e limita a largura em telas grandes */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* ---------- 2. Acessibilidade ---------- */
+
+/* Contorno visível em tudo que recebe foco pelo teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Link "Pular para o conteúdo": escondido até receber foco (Tab) */
+.pular_conteudo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    /* sobe o valor da própria altura, para sumir mesmo com a fonte aumentada */
+    transform: translateY(-150%);
+    padding: 10px 16px;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.pular_conteudo:focus {
+    transform: none;
+    top: 10px;
+}
+
+
+/* Com a fonte aumentada, palavras longas quebram em vez de empurrar a página */
+.card,
+.passo,
+.dados,
+.equipe li,
+.detalhes dd {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- 3. Cabeçalho e menu ---------- */
+
+.cabecalho {
+    background-color: white;
+    border-bottom: 5px solid var(--azul);
+}
+
+.cabecalho_conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    height: 60px;
+}
+
+/* No celular, os links ficam em duas colunas */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4px;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: black;
+    font-size: 90%;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.menu a:hover {
+    background-color: var(--creme);
+    transform: scale(1.03);
+    color: var(--azul);
+}
+
+/* Página atual destacada no menu */
+.menu a[aria-current="page"] {
+    color: var(--azul);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+
+/* ---------- 4. Componentes usados em várias páginas ---------- */
+
+/* Faixa de título no topo de cada página interna */
+.topo_pagina {
+    background-color: var(--creme);
+    padding: 30px 0;
+}
+
+.topo_pagina h1 {
+    margin: 0 0 8px;
+    font-size: 1.875rem;
+    color: var(--laranja_texto);
+}
+
+.topo_pagina p {
+    margin: 0;
+    font-size: 1.125rem;
+    max-width: 700px;
+}
+
+/* Seções das páginas */
+.secao {
+    padding: 36px 0;
+}
+
+.secao_alternada {
+    background-color: var(--creme);
+}
+
+.secao h2 {
+    margin: 0 0 12px;
+    font-size: 1.5625rem;
+    color: var(--azul);
+}
+
+.secao h3 {
+    margin: 0 0 6px;
+    font-size: 1.1875rem;
+    color: var(--cinza_texto);
+}
+
+.secao p {
+    max-width: 750px;
+}
+
+.texto_suave {
+    color: var(--cinza_suave);
+}
+
+.fonte {
+    font-size: 0.8125rem;
+    color: var(--cinza_suave);
+}
+
+/* Botões: o próprio link (ou botão) é o botão inteiro */
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.botao_voluntario,
+.botao {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--azul);
+    color: white;
+    border: 2px solid var(--azul);
+    min-width: 200px;
+    cursor: pointer;
+}
+
+.botao_voluntario:hover,
+.botao:hover {
+    background-color: var(--creme);
+    color: var(--azul);
+}
+
+.botao_contorno {
+    background-color: white;
+    color: var(--azul);
+}
+
+.botao_contorno:hover {
+    background-color: var(--azul);
+    color: white;
+}
+
+/* Cards (caixas de conteúdo) */
+.cards {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-top: 5px solid var(--laranja);
+    border-radius: var(--raio);
+    padding: 20px;
+}
+
+.card p {
+    margin: 0 0 8px;
+}
+
+.card_destaque {
+    border-top-color: var(--azul);
+}
+
+/* Passos numerados (Como funciona) */
+.passos {
+    list-style: none;
+    counter-reset: passo;
+    margin: 20px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+.passo {
+    counter-increment: passo;
+    position: relative;
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 20px 20px 20px 76px;
+}
+
+/* O número do passo é desenhado pelo CSS */
+.passo::before {
+    content: counter(passo);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passo p {
+    margin: 0;
+}
+
+/* Listas de informações dentro dos cards (ONG, local, horas...) */
+.detalhes {
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 4px 12px;
+    font-size: 0.9375rem;
+}
+
+.detalhes dt {
+    font-weight: 700;
+}
+
+.detalhes dd {
+    margin: 0;
+}
+
+/* Etiquetas (presencial,remoto...) */
+.etiqueta {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 100px;
+    background-color: var(--pessego);
+    color: var(--cinza_texto);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Tabelas */
+.tabela_rolagem {
+    overflow-x: auto;   /* no celular, a tabela rola dentro da própria caixa */
+    margin: 16px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    background-color: white;
+    font-size: 0.9375rem;
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+
+th,
+td {
+    border: 1px solid var(--borda);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background-color: var(--azul);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--creme);
+}
+
+/* Formulários */
+.formulario {
+    display: grid;
+    gap: 16px;
+    max-width: 650px;
+    margin-top: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label,
+.formulario legend {
+    font-weight: 700;
+}
+
+.dica {
+    font-size: 0.875rem;
+    color: var(--cinza_suave);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 2px solid #8A8A8A;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--cinza_texto);
+}
+
+.formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Depois que a pessoa mexe no campo, a borda mostra se está certo ou errado */
+.formulario input:user-invalid,
+.formulario select:user-invalid,
+.formulario textarea:user-invalid {
+    border-color: var(--vermelho_erro);
+}
+
+.campo_checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.campo_checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+.campo_checkbox label {
+    font-weight: 400;
+}
+
+.obrigatorio {
+    color: var(--vermelho_erro);
+}
+
+/* Mensagem de envio: só aparece quando o endereço termina em #enviado */
+.mensagem_enviado {
+    display: none;
+    border-left: 6px solid var(--verde_ok);
+    background-color: #E8F5EA;
+    padding: 16px 20px;
+    border-radius: 0 var(--raio) var(--raio) 0;
+    margin-top: 20px;
+}
+
+.mensagem_enviado:target {
+    display: block;
+}
+
+.mensagem_enviado h2 {
+    color: var(--verde_ok);
+    font-size: 1.25rem;
+    margin: 0 0 4px;
+}
+
+/* Questionário do Teste de Aptidão */
+.pergunta_teste {
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 16px 20px;
+    margin: 0;
+    background-color: white;
+}
+
+.pergunta_teste legend {
+    padding: 0 6px;
+}
+
+.opcao {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+
+.opcao input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Resultado do Teste de Aptidão (preenchido pelo js/teste.js) */
+.resultado_automatico {
+    border-left: 6px solid var(--azul);
+    background-color: white;
+    padding: 16px 20px;
+    border-radius: 0 var(--raio) var(--raio) 0;
+    font-size: 1.125rem;
+    max-width: 750px;
+}
+
+/* Card do perfil que a pessoa tirou */
+.card.perfil_escolhido {
+    border: 3px solid var(--azul);
+    border-top-width: 8px;
+    background-color: var(--pessego);
+}
+
+/* Galeria de imagens */
+.galeria {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+.galeria figure {
+    margin: 0;
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    overflow: hidden;
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+}
+
+.galeria figcaption {
+    padding: 12px 16px;
+}
+
+.galeria figcaption strong,
+.galeria figcaption .fonte {
+    display: block;
+}
+
+.galeria figcaption .fonte {
+    margin-top: 6px;
+}
+
+.secao address {
+    font-style: normal;
+}
+
+/* Vídeo, áudio e mapa */
+.midia {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.midia figure {
+    margin: 0;
+}
+
+.midia video {
+    display: block;
+    width: 100%;
+    border-radius: var(--raio);
+    background-color: black;
+}
+
+.midia audio {
+    width: 100%;
+}
+
+.midia figcaption {
+    margin-top: 8px;
+    font-size: 0.9375rem;
+}
+
+.moldura_mapa {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--raio);
+    overflow: hidden;
+    border: 1px solid var(--borda);
+}
+
+.moldura_mapa iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.transcricao summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--azul);
+    margin-top: 8px;
+}
+
+/* Perguntas frequentes (abre e fecha sem JavaScript, com <details>) */
+.perguntas {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+.perguntas details {
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: white;
+}
+
+.perguntas summary {
+    cursor: pointer;
+    padding: 14px 20px;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.perguntas details[open] summary {
+    border-bottom: 1px solid var(--borda);
+}
+
+.perguntas details p {
+    margin: 0;
+    padding: 14px 20px;
+}
+
+/* Lista com marcador laranja */
+.lista_check {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: grid;
+    gap: 8px;
+}
+
+.lista_check li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.lista_check li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--laranja);
+}
+
+/* Equipe (página de contato) */
+.equipe {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 12px;
+}
+
+.equipe li {
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-left: 5px solid var(--azul);
+    border-radius: 0 var(--raio) var(--raio) 0;
+    padding: 12px 16px;
+}
+
+.equipe strong {
+    display: block;
+}
+
+
+/* ---------- 5. Partes específicas da Home ---------- */
+
+.apresentacao {
+    background-color: var(--creme);
+    padding: 30px 0 50px;
+}
+
+.apresentacao_conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.frases h1 {
+    margin: 0 0 10px;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: var(--laranja_texto);
+}
+
+.frases p {
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.globo {
+    width: 160px;
+}
+
+.pq_existe h2,
+.noticias h2 {
+    color: var(--laranja_texto);
+}
+
+.lista_dados {
+    list-style: none;
+    margin: 30px 0 15px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+}
+
+.dados {
+    background-color: var(--pessego);
+    border-left: 5px solid var(--laranja);
+    padding: 10px 20px 20px;
+}
+
+.num_dado {
+    display: block;
+    color: var(--laranja_texto);
+    font-size: 2.5rem;
+}
+
+.frase_dado {
+    font-size: 0.875rem;
+}
+
+.noticia time,
+.noticia .veiculo {
+    font-size: 0.875rem;
+    color: var(--cinza_suave);
+}
+
+
+/* ---------- 6. Rodapé ---------- */
+
+.rodape {
+    background-color: var(--cinza_texto);
+    color: white;
+    padding-top: 30px;
+}
+
+.rodape_conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(77, 77, 77);
+}
+
+.rodape_titulo {
+    color: var(--laranja); /* sobre o fundo escuro o contraste é 4,9, então pode */
+    font-size: 1.25rem;
+    margin: 0 0 6px;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+.rodape address {
+    font-style: normal;
+}
+
+.rodape a {
+    color: white;
+}
+
+.rodape a:focus-visible {
+    outline-color: var(--laranja);
+}
+
+.rodape_links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 4px;
+}
+
+.creditos {
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+}
+
+
+/* =========================================================
+   TABLET (a partir de 768px)
+   ========================================================= */
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .topo_pagina h1,
+    .frases h1 {
+        font-size: 2.25rem;
+    }
+
+    .cards,
+    .galeria,
+    .lista_dados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista_dados {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .equipe {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rodape_conteudo {
+        flex-direction: row;
+        flex-wrap: wrap;   /* com a fonte aumentada, as colunas passam para a linha de baixo */
+        justify-content: space-between;
+        gap: 24px 40px;
+    }
+}
+
+/* =========================================================
+   DESKTOP (a partir de 1024px)
+   ========================================================= */
+@media (min-width: 1024px) {
+    .topo_pagina {
+        padding: 44px 0;
+    }
+
+    .cards,
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards_duas_colunas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .passos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .midia {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .midia .midia_larga {
+        grid-column: 1 / -1;
+    }
+
+    .apresentacao {
+        padding: 50px 0 60px;
+    }
+
+    .apresentacao_conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .frases {
+        max-width: 600px;
+    }
+
+    .frases h1 {
+        font-size: 2.5rem;
+    }
+
+    .globo {
+        width: 250px;
+    }
+}
+
+/* =========================================================
+   TELAS LARGAS (a partir de 1200px): logo e menu na mesma linha.
+   Antes disso, o menu fica embaixo do logo para não quebrar os links.
+   ========================================================= */
+@media (min-width: 1200px) {
+    .cabecalho_conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    .logo {
+        height: 72px;
+    }
+
+    .menu {
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+
+    .menu a {
+        padding: 8px;
+    }
+}
+
+/* Quem prefere menos movimento não vê a animação do menu */
+@media (prefers-reduced-motion: reduce) {
+    .menu a {
+        transition: none;
+    }
+
+    .menu a:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   7. Barra de acessibilidade (criada por js/acessibilidade.js)
+   ========================================================= */
+
+.barra_acessibilidade {
+    background-color: var(--creme);
+    border-bottom: 1px solid var(--borda);
+}
+
+.barra_acessibilidade_conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 20px;
+}
+
+.barra_acessibilidade_titulo {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.barra_botao {
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 700;
+    min-height: 40px;
+    min-width: 44px;
+    padding: 4px 14px;
+    border-radius: 100px;
+    border: 2px solid var(--azul);
+    background-color: white;
+    color: var(--azul);
+    cursor: pointer;
+}
+
+.barra_botao:hover,
+.barra_botao[aria-pressed="true"] {
+    background-color: var(--azul);
+    color: white;
+}
+
+/* O alvo do link "Pular para o conteúdo" recebe foco, mas sem contorno */
+main:focus {
+    outline: none;
+}
+
+/* Erros de validação dos formulários (criados por js/formularios.js) */
+.erro_campo {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--vermelho_erro);
+}
+
+.formulario input[aria-invalid="true"],
+.formulario select[aria-invalid="true"],
+.formulario textarea[aria-invalid="true"] {
+    border-color: var(--vermelho_erro);
+    border-width: 3px;
+}
+
+.resumo_erros {
+    border-left: 6px solid var(--vermelho_erro);
+    background-color: #FDECEA;
+    padding: 12px 20px;
+    border-radius: 0 var(--raio) var(--raio) 0;
+    max-width: 650px;
+    margin-top: 20px;
+}
+
+.resumo_erros p {
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.resumo_erros ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.aviso_rascunho {
+    border-left: 6px solid var(--azul);
+    background-color: var(--creme);
+    padding: 10px 16px;
+    border-radius: 0 var(--raio) var(--raio) 0;
+    max-width: 650px;
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+}
+
+.aviso_rascunho p {
+    margin: 0;
+}
+
+/* ---------- Modo de alto contraste (fundo preto, texto branco e amarelo) ---------- */
+
+html.alto_contraste,
+html.alto_contraste body,
+html.alto_contraste :where(header, main, section, footer, div, ul, ol, li, article, figure,
+    figcaption, details, summary, table, tr, td, th, fieldset, legend, form, p, address, nav,
+    dl, dt, dd, caption, h1, h2, h3, span, strong, label) {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+html.alto_contraste h1,
+html.alto_contraste h2,
+html.alto_contraste h3,
+html.alto_contraste .num_dado,
+html.alto_contraste .rodape_titulo,
+html.alto_contraste .mensagem_enviado h2,
+html.alto_contraste .perguntas summary,
+html.alto_contraste .transcricao summary {
+    color: #FFEB3B !important;
+}
+
+html.alto_contraste a {
+    color: #FFEB3B !important;
+    text-decoration: underline;
+    background-color: transparent !important;
+}
+
+html.alto_contraste .menu a[aria-current="page"] {
+    text-decoration-thickness: 4px;
+}
+
+html.alto_contraste .botao,
+html.alto_contraste .botao_voluntario,
+html.alto_contraste .barra_botao {
+    background-color: #FFEB3B !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+    text-decoration: none;
+}
+
+html.alto_contraste .botao_contorno {
+    background-color: #000 !important;
+    color: #FFEB3B !important;
+    border-color: #FFEB3B !important;
+}
+
+html.alto_contraste thead th,
+html.alto_contraste .passo::before {
+    background-color: #FFEB3B !important;
+    color: #000 !important;
+}
+
+html.alto_contraste .lista_check li::before {
+    background-color: #FFEB3B;
+}
+
+html.alto_contraste .formulario input,
+html.alto_contraste .formulario select,
+html.alto_contraste .formulario textarea {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+html.alto_contraste .erro_campo,
+html.alto_contraste .obrigatorio {
+    color: #FF9E9E !important;
+}
+
+html.alto_contraste .logo {
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+html.alto_contraste .card,
+html.alto_contraste .passo,
+html.alto_contraste .dados,
+html.alto_contraste .pergunta_teste,
+html.alto_contraste .equipe li,
+html.alto_contraste .galeria figure,
+html.alto_contraste .perguntas details {
+    border: 2px solid #fff !important;
+}
+
+html.alto_contraste a:focus-visible,
+html.alto_contraste button:focus-visible,
+html.alto_contraste input:focus-visible,
+html.alto_contraste select:focus-visible,
+html.alto_contraste textarea:focus-visible,
+html.alto_contraste summary:focus-visible {
+    outline: 4px solid #00E5FF;
+    outline-offset: 3px;
+}
